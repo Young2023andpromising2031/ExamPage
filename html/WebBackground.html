@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户信息管理系统</title>
+    <link rel="stylesheet" href="../css/WebBackground.css">
+    <!-- 引图标 -->
+    <!-- <script src="https://fontawesome.com.cn/search-%E5%A4%B4%E5%83%8F"></script> -->
+</head>
+
+<body>
+    <div class="All">
+        <div class="leftBox">
+            <!-- 左侧头部 -->
+            <div class="leftBox-top">
+                <div class="leftBoxTop-in">
+                    <div class="logo">
+                        <img src="../img/ruoyilogo.png">
+                    </div>
+                    <div class="word">
+                        <h1>若依管理系统</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- 菜单栏 -->
+            <div class="menu">
+                <ul>
+                    <!-- 用户图标<i class="fas fa-user"/> -->
+                    <li><button id="user"><a href="#">用户中心</a></button></li>
+                    <li><button id="dish"><a href="#">菜单中心</a></button></li>
+                    <li><button id="order"><a href="#">订单中心</a></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightBox">
+            <div class="rightTop">
+                <div class="exit">
+                    <button id="exitsys"><h2>退出系统</h2></button>
+                </div>
+                <div class="search">
+                    <input type="search" value="搜索框" placeholder="请输入关键词：" id="submit" />
+                    <button class="searchBtn">搜索</button>
+                    <!-- <ul class="search-list">
+                    <li class="list"><a href="#">用户信息管理</a><>
+                    <li class="list"><a href="#">菜品管理</a><>
+                    <li class="list"><a href="#">订单管理</a><>
+                </ul> -->
+                </div>
+                <!-- <div class="menu">
+                        <a href="#">菜单按钮</a>
+                    </div> -->
+            </div>
+            <!-- 用户页面  -->
+            <div class="rightCondentUser">
+                <div class="WebDish">
+                    <button class="addUserBtn">增加</button>
+                    <ul class="ulSty">
+                        <li>用户名</li>
+                        <li>手机号</li>
+                        <li>年龄</li>
+                        <li>性别</li>
+                    </ul>
+                    <div id="WebUserContent">
+                        <ul class="ulSty">
+                            <li>用户名</li>
+                            <li>手机号</li>
+                            <li>年龄</li>
+                            <li>性别</li>
+                            <li>
+                                <button class="modify">修改</button>
+                                <button class="del">删除</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 翻页按钮 -->
+                <div class="page">
+                    <input type="text" id="number" placeholder="请选择">
+                    <button id="prevBtnUser">上一页</button>
+                    <span>第</span><button id="nowpageUser">1</button><span>页</span>
+                    <button id="nextBtnUser">下一页</button>
+                </div>
+            </div>
+
+            <!-- 菜单页面 -->
+            <div class="rightCondentDish">
+                <div class="WebDish">
+                    <button class="addDishBtn">增加</button>
+                    <ul class="ulSty">
+                        <li>菜品名</li>
+                        <li>价格</li>
+                        <li>口味</li>
+                        <li>类型</li>
+                        <li>操作框</li>
+                    </ul>
+                    <div id="WebDishContent">
+                        <ul class="ulSty">
+                            <li>菜品名</li>
+                            <li>价格</li>
+                            <li>口味</li>
+                            <li>类型</li>
+                            <li>
+                                <button class="modify">修改</button>
+                                <button class="del">删除</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 翻页按钮 -->
+                <div class="page">
+                    <input type="text" id="number" placeholder="请选择">
+                    <button id="prevBtnDish">上一页</button>
+                    <span>第</span><button id="nowpageDish">1</button><span>页</span>
+                    <button id="nextBtnDish">下一页</button>
+                </div>
+            </div>
+            <!-- 订单页面 -->
+            <div class="rightCondentOrder">
+                <div class="WebDish">
+                    <button class="addOrderBtn">增加</button>
+                    <ul class="ulSty">
+                        <li>用户名</li>
+                        <li>订单金额</li>
+                        <li>手机号</li>
+                        <li>支付</li>
+                        <!-- <li>id</li> -->
+                    </ul>
+                    <div id="WebOrderContent">
+                        <ul class="ulSty">
+                            <li>用户名</li>
+                            <li>订单金额</li>
+                            <li>手机号</li>
+                            <li>支付</li>
+                            <!-- <li>id</li> -->
+                            <li>
+                                <button class="modify">修改</button>
+                                <button class="del">删除</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 翻页按钮 -->
+                <div class="page">
+                    <input type="text" id="number" placeholder="请选择">
+                    <button id="prevBtnOrder">上一页</button>
+                    <span>第</span><button id="nowpageOrder">1</button><span>页</span>
+                    <button id="nextBtnOrder">下一页</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 修改用户弹窗 -->
+    <div class="modifyPopUser">
+        <div class="modifyPopUserBox">
+            <div class="close">
+                <a href="#" id="stopItUser">X</a>
+            </div>
+            <h2 class="modifyTitle">修改用户</h2>
+            <div class="modifyPopUserCondent">
+                <div class="popBox">
+                    <span>用户名: </span>
+                    <input type="text" id="inputUs" placeholder="请输入价格：">
+                    <br>
+                </div>
+                <!-- <div class="popBox">
+                    <span>手机号: </span>
+                    <input type="text" id="inputId" placeholder="请输入用户id：">
+                    <br>
+                </div> -->
+                <div class="popBox">
+                    <span>年龄: </span>
+                    <input type="text" id="inputAge" placeholder="请输入口味：">
+                    <br>
+                </div>
+                <div class="popBox">
+                    <span>性别: </span>
+                    <input type="text" id="inputSex" placeholder="请输入类型：">
+                </div>
+                <div class="modifyPopBtn">
+                    <button class="certainUser">确定</button>
+                    <button id="certainAddUser">确定</button>
+                    <button class="cancelUser">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改菜单弹窗 -->
+    <div class="modifyPop">
+        <div class="modifyPopBox">
+            <div class="close">
+                <a href="#" id="stopItDish">X</a>
+            </div>
+            <h2 class="modifyTitle">修改菜单</h2>
+            <div class="modifyPopCondent">
+                <div class="popBox">
+                    <span>菜名: </span>
+                    <input type="text" id="inputDishName" placeholder="请输入菜品名：">
+                    <br>
+                </div>
+                <div class="popBox">
+                    <span>价格: </span>
+                    <input type="text" id="inputDishPrice" placeholder="请输入价格：">
+                    <br>
+                </div>
+                <div class="popBox">
+                    <span>描述: </span>
+                    <input type="text" id="inputDishDesc" placeholder="请输入口味：">
+                    <br>
+                </div>
+                <div class="popBox">
+                    <span>类型: </span>
+                    <input type="text" id="inputDishType" placeholder="请输入类型：">
+                </div>
+                <!-- <div class="popBox">
+                    <span>typeid: </span>
+                    <input type="text" id="inputvalue" placeholder="请输入：">
+                </div> -->
+                <!-- <div class="popBox">
+                    <span>id : </span>
+                    <input type="text" id="inputvalue" placeholder="请输入id：">
+                </div> -->
+            </div>
+            <div class="modifyPopBtn">
+                <button class="certainDish">确定</button>
+                <button class="cancelDish">取消</button>
+            </div>
+        </div>
+    </div>
+    <!-- 修改订单弹窗 -->
+    <div class="modifyPopOrder">
+        <div class="modifyPopOrderBox">
+            <div class="close">
+                <a href="#" id="stopIt">X</a>
+            </div>
+            <h2 class="modifyTitle">修改订单</h2>
+            <div class="modifyPopOrderCondent">
+                <div class="popBox">
+                    <span>用户名: </span>
+                    <input type="text" id="inputUs" placeholder="请输入价格：">
+                    <br>
+                </div>
+                <div class="popBox">
+                    <span>订单金额: </span>
+                    <input type="text" id="inputAmount" placeholder="请输入口味：">
+                    <br>
+                </div>
+                <div class="popBox">
+                    <span>性别: </span>
+                    <input type="text" id="inputPhone" placeholder="请输入类型：">
+                </div>
+                <div class="popBox">
+                    <span>  支付: </span>
+                    <input type="text" id="inputPay" placeholder="请输入用户id：">
+                    <br>
+                </div>
+                <div class="modifyPopBtn">
+                    <button class="certain">确定</button>
+                    <button class="cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+<script src="../js/DishBackground.js"></script>
+<script src="../js/UserBackground.js"></script>
+<script src="../js/OrderBackground.js"></script>
+
+</html>

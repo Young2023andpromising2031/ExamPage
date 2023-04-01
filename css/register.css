@@ -1,0 +1,81 @@
+*{
+    padding:0;
+    margin:0;
+}
+input {
+    outline: none;
+    padding: 10px 30px;
+    border-style: none;
+    border-radius: 10px;
+}
+button {
+    width:100px;
+    border-style: none;
+    border-radius: 8px;
+    text-align: center;
+    background-color: beige;
+    font-size: 20px;
+    font-family: serif;
+    margin-left:20px;
+}
+
+.registerback {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url('../img/景2.jpg');
+    position: fixed;
+}
+
+.register {
+    width: 400px;
+    border-radius: 8px;
+    background-color: rgba(166, 110, 220, 0.9);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.registerContent {
+    /* position: absolute; */
+    margin: 0 auto;
+    line-height: 20px;
+}
+
+.top {
+    color: beige;
+    font-family: fantasy;
+    text-align: center;
+    padding-top: 20px;
+}
+.rem{
+    margin-top: 10px;
+}
+
+.btn {
+    margin: 20px auto;
+    text-align: center;
+}
+#registerBtn {
+    width: 50%;
+    height: 30px;
+    background-color: beige;
+    cursor: pointer;
+}
+
+#info ul {
+    list-style-type: none
+}
+
+.footer {
+    width: 100%;
+    color: azure;
+    position: absolute;
+    text-align: center;
+    margin: 460px;
+    /* top: 245px; */
+}

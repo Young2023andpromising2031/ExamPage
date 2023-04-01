@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+$basecolor: #a2edcd;
+$bottomcolor: azure;
+$backgroundcolor: pink;
+$word-family: 'Times New Roman', Times, serif;
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    line-height: 50px;
+}
+
+button {
+    outline: none;
+    // background-color:#7219cb0e;
+    // border-style: hidden;
+    margin-left: 15px;
+    // 鼠标样式变手
+    cursor: pointer;
+    width: 80px;
+    height: 22px;
+    margin-top: 2px;
+    background-color: yellowgreen;
+    border-style: none;
+    border-radius: 5px;
+}
+.All {
+    // position: fixed;
+    display: flex;
+}
+
+.leftBox {
+    width: 280px;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.rightBox {
+    position: relative;
+    background-color: aliceblue;
+    width: 100%;
+    height: 20px;
+}
+.rightTop {
+    width: 100%;
+    height: 80px;
+    background-color: #baf3c8;
+}
+.exit{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin: 25px 1300px;
+}
+h2{
+    font-size: 14px;
+    
+}
+
+.rightCondentUser,.rightCondentDish,.rightCondentOrder {
+    width: 100%;
+    // display: none;
+    background: beige;
+}
+.rightCondentOrder,.rightCondentDish{
+    display: none;
+}
+
+.leftBox-top {
+    width: 280px;
+    height: 30vh;
+    // display: flex;
+    background-color:$bottomcolor;
+    text-align: center;
+}
+
+.leftBoxTop-in {
+    text-align: center;
+}
+
+.word {
+    font-family: $word-family;
+    font-size: 15px;
+    padding-left: 18px;
+}
+.modifyTitle{
+    font-family:$word-family;
+    font-size:43px;
+    text-align: center;
+    margin-top: 15px;
+    color: currentColor;
+}
+
+.menu {
+    background-color: antiquewhite;
+}
+.menu ul li>button{
+    border-style: none;
+    background-color: antiquewhite;
+    font-size: 40px;
+    font-family: $word-family;
+}
+
+.menu ul li {
+    line-height: 160px;
+    text-align: center;
+}
+
+.menu ul li a:hover {
+    color: rgb(18, 212, 196);
+    text-decoration: none;
+}
+
+// .button {
+//     width: 50px;
+//     margin-top: 2px;
+//     background-color: yellowgreen;
+//     width: 45px;
+//     height: 22px;
+// }
+
+.search {
+    position: absolute;
+    margin-left: 866px;
+    margin-top: 18px;
+}
+
+input {
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border-color: darkgreen;
+}
+
+.WebDish{
+    margin-top: 60px;
+}
+
+.WebDish ul {
+    text-align: center;
+}
+
+.WebDish ul li {
+    display: inline;
+    font-family: $word-family ;
+    font-size: 22px;
+    width: 280px;
+}
+
+.ulSty {
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#nowpage {
+    border-style: none;
+    border-color: antiquewhite;
+    width: 100px;
+}
+
+.page {
+    margin-left: 779px;
+    margin-top: 65px;
+}
+
+//修改弹窗部分
+.modifyPop{
+    position: absolute;
+    background-color: rgba($color: #c1c9bc, $alpha: 0.95);
+    outline: 5px solid #f0f1ff;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    // z-index: 1;
+}
+.modifyPopUser,.modifyPopOrder{
+    // position: absolute;
+    // background-color: rgba($color: #c1c9bc, $alpha: 0.95);
+    // outline: 5px solid #f0f1ff;
+    // width: 500px;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    @extend .modifyPop;
+}
+// .modifyPopOrder{
+//     position: absolute;
+//     background-color: rgba($color: #c1c9bc, $alpha: 0.95);
+//     outline: 5px solid #f0f1ff;
+//     width: 500px;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+
+// }
+
+.modifyPopCondent,.modifyPopUserCondent,.modifyPopOrderCondent{
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.popBox {
+    margin-top: 50px;
+}
+
+.popBox>span {
+    font-size: 20px;
+    font-family: $word-family ;
+}
+
+.modifyPopBtn>button {
+    border-style: none;
+    width: 80px;
+    height: 30px;
+}
+
+.modifyPopBtn{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 35px;
+}
+
+.certain {
+    background-color: #1890FF;
+}
+
+.cancel {
+    background-color: rgb(241, 155, 155);
+}
+
+.close {
+    margin-left: 487px;
+}
+// 修改用户弹窗
+// .modifyPopUser{
+//     @extend .modifyPop
+// }
+// .modifyPopUserCondent{
+//     text-align: center;
+//     padding: 20px 10px;
+
+// }
+.addUserBtn,.addDishBtn,.addOrderBtn {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 40px;
+}
