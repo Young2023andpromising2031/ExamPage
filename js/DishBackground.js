@@ -228,15 +228,15 @@ stopIt.onclick = function () {
 // 翻页部分
 var prevbtnDish = document.getElementById('prevBtnDish');
 var nextbtnDish = document.getElementById('nextBtnDish');
-var pagenum = document.getElementById('nowpageDish');
+var pagenumDish = document.getElementById('nowpageDish');
 // 上一页按钮实现
 prevbtnDish.onclick = function () {
     console.log('上一页');
-    if (pagenum.innerHTML <= 1) {
+    if (pagenumDish.innerHTML <= 1) {
         alert("当前页数已至顶！")
     } else {
         foodPage--
-        pagenum.innerHTML--;
+        pagenumDish.innerHTML--;
         getfoodPage(foodPage, foodPageSize);
     }
 }
@@ -247,7 +247,7 @@ nextbtnDish.onclick = function () {
     if (foodPage >= Math.ceil(len / 5)) {
         alert("当前是最后一页！");
     } else {
-        pagenum.innerHTML++;
+        pagenumDish.innerHTML++;
         foodPage++;
         getfoodPage(foodPage, foodPageSize);
     }
